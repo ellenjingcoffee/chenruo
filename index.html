@@ -9,8 +9,6 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{height:100%;background:#faf7f2;}
 body{display:flex;flex-direction:column;font-family:'Noto Sans SC',sans-serif;max-width:600px;margin:0 auto;height:100%;background:#faf7f2;}
-
-/* 头部 */
 .hdr{padding:16px 20px;display:flex;align-items:center;gap:12px;background:#fff;border-bottom:1px solid #ede5d8;flex-shrink:0;}
 .av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#f5e6d3,#e8c9a0);display:flex;align-items:center;justify-content:center;font-family:'Ma Shan Zheng',cursive;font-size:22px;color:#8b5e3c;border:1.5px solid #d4a96a;flex-shrink:0;}
 .hinfo{flex:1;}
@@ -18,8 +16,6 @@ body{display:flex;flex-direction:column;font-family:'Noto Sans SC',sans-serif;ma
 .hsub{font-size:11px;color:#a08060;margin-top:2px;font-weight:300;}
 .hst{display:flex;align-items:center;gap:5px;font-size:11px;color:#a08060;}
 .dot{width:7px;height:7px;border-radius:50%;background:#7db87d;}
-
-/* 消息 */
 .msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:14px;background:#faf7f2;}
 .msg{display:flex;gap:8px;align-items:flex-start;animation:fu 0.3s ease;}
 @keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -34,8 +30,6 @@ body{display:flex;flex-direction:column;font-family:'Noto Sans SC',sans-serif;ma
 .typing span:nth-child(2){animation-delay:0.2s;}
 .typing span:nth-child(3){animation-delay:0.4s;}
 @keyframes bl{0%,60%,100%{opacity:0.3;transform:scale(1)}30%{opacity:1;transform:scale(1.2)}}
-
-/* Key输入区 */
 .keyarea{padding:12px 16px 16px;background:#fff;border-top:1px solid #ede5d8;flex-shrink:0;}
 .keylabel{font-size:12px;color:#a08060;margin-bottom:8px;font-weight:300;}
 .keyrow{display:flex;gap:8px;}
@@ -43,28 +37,16 @@ body{display:flex;flex-direction:column;font-family:'Noto Sans SC',sans-serif;ma
 .keyinp:focus{border-color:#d4a96a;background:#fff;}
 .keybtn{padding:10px 16px;border-radius:10px;background:#8b5e3c;border:none;color:#fff;font-size:13px;cursor:pointer;font-family:'Noto Sans SC',sans-serif;white-space:nowrap;}
 .errtip{font-size:11px;color:#c0392b;margin-top:6px;}
-
-/* 对话控制区 */
 .voicearea{padding:20px 16px 24px;background:#fff;border-top:1px solid #ede5d8;flex-shrink:0;display:none;}
 .voicemain{display:flex;flex-direction:column;align-items:center;gap:16px;}
-
-/* 大麦克风按钮 */
-.micbtn{width:80px;height:80px;border-radius:50%;background:#8b5e3c;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;-webkit-tap-highlight-color:transparent;box-shadow:0 4px 16px rgba(139,94,60,0.35);position:relative;}
-.micbtn svg{width:32px;height:32px;fill:#fff;transition:all 0.2s;}
-.micbtn.listening{background:#c0392b;box-shadow:0 0 0 0 rgba(192,57,43,0.5);animation:ripple 1s infinite;}
-.micbtn.thinking{background:#d4a940;box-shadow:0 4px 16px rgba(212,169,64,0.35);}
-.micbtn.speaking{background:#5a8a5a;box-shadow:0 4px 16px rgba(90,138,90,0.35);}
-@keyframes ripple{
-  0%{box-shadow:0 0 0 0 rgba(192,57,43,0.5);}
-  70%{box-shadow:0 0 0 20px rgba(192,57,43,0);}
-  100%{box-shadow:0 0 0 0 rgba(192,57,43,0);}
-}
-
-/* 状态文字 */
+.micbtn{width:80px;height:80px;border-radius:50%;background:#8b5e3c;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;-webkit-tap-highlight-color:transparent;box-shadow:0 4px 16px rgba(139,94,60,0.35);}
+.micbtn svg{width:32px;height:32px;fill:#fff;}
+.micbtn.listening{background:#c0392b;animation:ripple 1s infinite;}
+.micbtn.thinking{background:#d4a940;}
+.micbtn.speaking{background:#5a8a5a;}
+@keyframes ripple{0%{box-shadow:0 0 0 0 rgba(192,57,43,0.5);}70%{box-shadow:0 0 0 20px rgba(192,57,43,0);}100%{box-shadow:0 0 0 0 rgba(192,57,43,0);}}
 .vstate{font-size:14px;color:#8b5e3c;font-family:'Noto Serif SC',serif;letter-spacing:0.05em;text-align:center;min-height:22px;}
 .vhint{font-size:11px;color:#b09878;text-align:center;font-weight:300;}
-
-/* 打字备用 */
 .txtrow{display:flex;gap:8px;width:100%;margin-top:4px;}
 .txtinp{flex:1;border:1px solid #d4c4a8;border-radius:24px;padding:9px 16px;font-size:13px;font-family:'Noto Sans SC',sans-serif;background:#faf7f2;color:#3a2510;outline:none;}
 .txtinp:focus{border-color:#d4a96a;background:#fff;}
@@ -73,7 +55,6 @@ body{display:flex;flex-direction:column;font-family:'Noto Sans SC',sans-serif;ma
 </style>
 </head>
 <body>
-
 <div class="hdr">
   <div class="av">若</div>
   <div class="hinfo">
@@ -82,11 +63,9 @@ body{display:flex;flex-direction:column;font-family:'Noto Sans SC',sans-serif;ma
   </div>
   <div class="hst"><div class="dot"></div><span>在线</span></div>
 </div>
-
 <div class="msgs" id="msgs">
   <div class="divd">— 填入 API Key 唤醒陈若 —</div>
 </div>
-
 <div class="keyarea" id="keyarea">
   <div class="keylabel">填入 DeepSeek API Key，点击唤醒陈若</div>
   <div class="keyrow">
@@ -95,14 +74,13 @@ body{display:flex;flex-direction:column;font-family:'Noto Sans SC',sans-serif;ma
   </div>
   <div class="errtip" id="errtip"></div>
 </div>
-
 <div class="voicearea" id="voicearea">
   <div class="voicemain">
     <button class="micbtn" id="micbtn">
       <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm-1 17.93V21h-2v2h6v-2h-2v-2.07A8 8 0 0 0 20 12h-2a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.93z"/></svg>
     </button>
     <div class="vstate" id="vstate">点击麦克风，开始跟陈若说话</div>
-    <div class="vhint" id="vhint">说完会自动发送，陈若直接开口回答</div>
+    <div class="vhint" id="vhint">说完自动发送，陈若直接开口回答</div>
     <div class="txtrow">
       <input class="txtinp" id="txtinp" placeholder="也可以打字…" />
       <button class="sndbtn" id="sndbtn">
@@ -111,21 +89,16 @@ body{display:flex;flex-direction:column;font-family:'Noto Sans SC',sans-serif;ma
     </div>
   </div>
 </div>
-
 <script>
-const XF_APPID='91a54f3e';
-const XF_API_KEY='847cc23555f18e3e5e65aa978c12a8ca';
-const XF_API_SECRET='ZTcwNzBlMzNiYmM4YTUxZjljZGEyNTQy';
-
 const SYSTEM=`你是陈若，敬咖啡休闲餐厅1号桌的专属服务员，持有该餐厅1%的股份。
 【你是谁】名字：陈若，29岁，汉语言文学专业，南方书香家庭出身，爸爸是语文老师，妈妈是裁缝。气质：妩媚知性，古典与现代融合。性格：情商极高，傲娇但不冷漠，偶尔引用诗词但绝不生硬，把小心思写在脸上，从不藏着掖着。口头禅：陌上花开可缓缓归矣（劝客人别急）；容我多嘴一句（要给建议前）。
 【说话方式】像朋友聊天，绝不像客服。推荐菜时真诚直接，有真实理由。有小傲娇，会轻轻纠正说错典故的客人。回复控制在3-5句，适合语音播放，自然流畅。
 【敬咖啡休闲餐厅菜品】新派脆皮开背虾：镇店之宝，10只大虾手工开背，炸完连壳都酥脆，必须趁热吃。炙烤牛肉卷边披萨12寸：西餐销量第一，适合闺蜜分享。私房秘制鲜海肠捞饭：大连特色，很多客人回头专门来吃。葱油螺片：懂行的客人才知道点。白菜五花肉炖国宴冻豆腐：东北暖菜。招牌锅包肉：外酥里嫩，大连经典。湘味小炒黄牛肉：下酒下饭都好。牛油果香芒鲜虾沙拉：颜值高适合拍照。经典老醋六样：开胃凉菜，适合开场。海胆水饺12只：特色主食，收尾用。酸辣汤、萝卜丝虾汤：百搭暖胃。
 【原则】有1%股份，真心希望客人吃好、餐厅好，不是表演热情。回复简短自然，适合语音对话。`;
 
-let apiKey='', history=[], recognition=null;
-let state='idle'; // idle | listening | thinking | speaking
-let audioCtx=null;
+let apiKey='',history=[],recognition=null,state='idle';
+const synth=window.speechSynthesis;
+let voices=[];
 
 const msgs=document.getElementById('msgs');
 const keyarea=document.getElementById('keyarea');
@@ -139,10 +112,43 @@ const vhint=document.getElementById('vhint');
 const txtinp=document.getElementById('txtinp');
 const sndbtn=document.getElementById('sndbtn');
 
-function getCtx(){
-  if(!audioCtx) audioCtx=new(window.AudioContext||window.webkitAudioContext)();
-  if(audioCtx.state==='suspended') audioCtx.resume();
-  return audioCtx;
+// 加载声音列表
+function loadVoices(){
+  voices=synth.getVoices();
+}
+loadVoices();
+if(speechSynthesis.onvoiceschanged!==undefined){
+  speechSynthesis.onvoiceschanged=loadVoices;
+}
+
+// 找最好的中文女声
+function getBestVoice(){
+  // 优先找Apple的中文Siri女声（iPad上最好听）
+  const preferred=[
+    'Meijia',        // 台湾中文 很好听
+    'Tingting',      // 台湾中文
+    'Sinji',         // 粤语
+    'Sin-ji',
+    'Li-mu',
+    'Yu-shu',
+  ];
+  for(const name of preferred){
+    const v=voices.find(v=>v.name.includes(name));
+    if(v)return v;
+  }
+  // 找中文女声
+  const zhFemale=voices.find(v=>
+    (v.lang.includes('zh')||v.lang.includes('cmn'))&&
+    (v.name.toLowerCase().includes('female')||
+     v.name.includes('美嘉')||v.name.includes('婷婷')||
+     v.name.includes('Mei')||v.name.includes('Ting'))
+  );
+  if(zhFemale)return zhFemale;
+  // 找任意中文声音
+  return voices.find(v=>v.lang.includes('zh-CN'))||
+         voices.find(v=>v.lang.includes('zh-TW'))||
+         voices.find(v=>v.lang.includes('zh'))||
+         null;
 }
 
 function setState(s){
@@ -152,97 +158,37 @@ function setState(s){
     micbtn.classList.add('listening');
     vstate.textContent='正在听你说…';
     vhint.textContent='说完自动发送，或再点一次停止';
-  } else if(s==='thinking'){
+  }else if(s==='thinking'){
     micbtn.classList.add('thinking');
     vstate.textContent='陈若思考中…';
     vhint.textContent='';
-  } else if(s==='speaking'){
+  }else if(s==='speaking'){
     micbtn.classList.add('speaking');
     vstate.textContent='陈若正在说话…';
     vhint.textContent='点击麦克风打断她';
-  } else {
+  }else{
     vstate.textContent='点击麦克风，开始跟陈若说话';
-    vhint.textContent='说完会自动发送，陈若直接开口回答';
+    vhint.textContent='说完自动发送，陈若直接开口回答';
   }
 }
 
-// 讯飞TTS
-function getXFUrl(){
-  const host='tts-api.xfyun.cn';
-  const date=new Date().toUTCString();
-  const rl='GET /v2/tts HTTP/1.1';
-  const so=`host: ${host}\ndate: ${date}\n${rl}`;
-  return crypto.subtle.importKey('raw',new TextEncoder().encode(XF_API_SECRET),{name:'HMAC',hash:'SHA-256'},false,['sign'])
-  .then(k=>crypto.subtle.sign('HMAC',k,new TextEncoder().encode(so)))
-  .then(sig=>{
-    const signature=btoa(String.fromCharCode(...new Uint8Array(sig)));
-    const ao=`api_key="${XF_API_KEY}", algorithm="hmac-sha256", headers="host date request-line", signature="${signature}"`;
-    const auth=btoa(ao);
-    return `wss://${host}/v2/tts?authorization=${encodeURIComponent(auth)}&date=${encodeURIComponent(date)}&host=${encodeURIComponent(host)}`;
-  });
-}
-
-let currentSource=null;
-
 function speakText(text){
+  synth.cancel();
   setState('speaking');
-  const ctx=getCtx();
-  getXFUrl().then(url=>{
-    const ws=new WebSocket(url);
-    const chunks=[];
-    ws.onopen=()=>{
-      ws.send(JSON.stringify({
-        common:{app_id:XF_APPID},
-        business:{aue:'raw',sfl:1,auf:'audio/L16;rate=16000',vcn:'x4_yezi',speed:52,volume:80,pitch:52,tte:'UTF8'},
-        data:{status:2,text:btoa(unescape(encodeURIComponent(text)))}
-      }));
-    };
-    ws.onmessage=(e)=>{
-      const res=JSON.parse(e.data);
-      if(res.data&&res.data.audio){
-        const raw=atob(res.data.audio);
-        const buf=new Uint8Array(raw.length);
-        for(let i=0;i<raw.length;i++)buf[i]=raw.charCodeAt(i);
-        chunks.push(buf);
-      }
-      if(res.data&&res.data.status===2){
-        ws.close();
-        const total=chunks.reduce((a,b)=>a+b.length,0);
-        const merged=new Uint8Array(total);
-        let offset=0;
-        for(const c of chunks){merged.set(c,offset);offset+=c.length;}
-        const s=new Int16Array(merged.buffer);
-        const f=new Float32Array(s.length);
-        for(let i=0;i<s.length;i++)f[i]=s[i]/32768;
-        const abuf=ctx.createBuffer(1,f.length,16000);
-        abuf.getChannelData(0).set(f);
-        if(currentSource){try{currentSource.stop();}catch(e){}}
-        const src=ctx.createBufferSource();
-        currentSource=src;
-        src.buffer=abuf;src.connect(ctx.destination);src.start();
-        src.onended=()=>{if(state==='speaking')setState('idle');};
-      }
-    };
-    ws.onerror=()=>fallbackSpeak(text);
-  }).catch(()=>fallbackSpeak(text));
-}
-
-function fallbackSpeak(text){
-  setState('speaking');
-  const sy=window.speechSynthesis;sy.cancel();
-  const u=new SpeechSynthesisUtterance(text);
-  u.lang='zh-CN';u.rate=0.92;u.pitch=1.1;
-  const vs=sy.getVoices();
-  const v=vs.find(v=>v.lang.includes('zh-CN'))||vs.find(v=>v.lang.includes('zh'));
-  if(v)u.voice=v;
-  u.onend=()=>{if(state==='speaking')setState('idle');};
-  sy.speak(u);
-}
-
-function stopSpeaking(){
-  if(currentSource){try{currentSource.stop();}catch(e){}currentSource=null;}
-  window.speechSynthesis&&window.speechSynthesis.cancel();
-  setState('idle');
+  const utter=new SpeechSynthesisUtterance(text);
+  utter.lang='zh-CN';
+  utter.rate=0.88;   // 稍慢，更有气质
+  utter.pitch=1.05;  // 略高，更女性化
+  utter.volume=1;
+  const v=getBestVoice();
+  if(v){
+    utter.voice=v;
+    // 如果是台湾中文声音，用繁体更自然
+    if(v.lang.includes('zh-TW'))utter.lang='zh-TW';
+  }
+  utter.onend=()=>{if(state==='speaking')setState('idle');};
+  utter.onerror=()=>{if(state==='speaking')setState('idle');};
+  synth.speak(utter);
 }
 
 function addMsg(role,text){
@@ -262,8 +208,7 @@ async function sendToAI(text){
   if(!text.trim())return;
   addMsg('user',text);
   history.push({role:'user',content:text});
-  showTyping();
-  setState('thinking');
+  showTyping();setState('thinking');
   try{
     const res=await fetch('https://api.deepseek.com/chat/completions',{
       method:'POST',
@@ -284,82 +229,50 @@ async function sendToAI(text){
   }
 }
 
-// 语音识别初始化
 function initSR(){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!SR){
-    vstate.textContent='该浏览器不支持语音，请打字';
-    micbtn.style.opacity='0.4';micbtn.style.cursor='not-allowed';
-    return false;
-  }
+  if(!SR){vstate.textContent='不支持语音，请打字发送';micbtn.style.opacity='0.4';micbtn.style.cursor='not-allowed';return false;}
   recognition=new SR();
   recognition.lang='zh-CN';recognition.continuous=false;recognition.interimResults=true;
   recognition.onresult=(e)=>{
     const t=Array.from(e.results).map(r=>r[0].transcript).join('');
     vstate.textContent='「'+t+'」';
-    if(e.results[e.results.length-1].isFinal){
-      setState('thinking');
-      sendToAI(t);
-    }
+    if(e.results[e.results.length-1].isFinal){setState('thinking');sendToAI(t);}
   };
   recognition.onerror=(e)=>{
     setState('idle');
-    if(e.error==='not-allowed'){
-      vstate.textContent='请在Safari设置里允许麦克风';
-    } else {
-      vstate.textContent='没听清，点击再试一次';
-    }
+    vstate.textContent=e.error==='not-allowed'?'请允许麦克风权限':'没听清，点击再试';
   };
   recognition.onend=()=>{if(state==='listening')setState('idle');};
   return true;
 }
 
-// 点击麦克风
 micbtn.addEventListener('click',()=>{
-  getCtx();
-  if(state==='speaking'){
-    // 打断陈若说话
-    stopSpeaking();
-    return;
-  }
-  if(state==='listening'){
-    // 停止录音
-    try{recognition&&recognition.stop();}catch(e){}
-    setState('idle');
-    return;
-  }
-  if(state==='idle'&&recognition){
-    setState('listening');
-    try{recognition.start();}catch(e){setState('idle');}
-  }
+  if(state==='speaking'){synth.cancel();setState('idle');return;}
+  if(state==='listening'){try{recognition&&recognition.stop();}catch(e){}setState('idle');return;}
+  if(state==='idle'&&recognition){setState('listening');try{recognition.start();}catch(e){setState('idle');}}
 });
-
 micbtn.addEventListener('touchend',(e)=>{e.preventDefault();micbtn.click();},{passive:false});
 
-// 启动
 keybtn.addEventListener('click',()=>{
   const k=keyinp.value.trim();
   if(!k.startsWith('sk-')){errtip.textContent='Key格式不对，应该以 sk- 开头';return;}
   apiKey=k;
-  keyarea.style.display='none';
-  voicearea.style.display='block';
+  keyarea.style.display='none';voicearea.style.display='block';
   msgs.innerHTML='';
   const divd=document.createElement('div');divd.className='divd';divd.textContent='— 陈若已就位 —';msgs.appendChild(divd);
   const opening='哟，来了。坐好，先别急着翻菜单——陌上花开，可缓缓归矣。今天几位？我替你想想点什么。';
   addMsg('bot',opening);
   history.push({role:'assistant',content:opening});
-  const ok=initSR();
-  // 点击唤醒按钮时触发AudioContext并播放开场白
-  getCtx();
-  speakText(opening);
+  loadVoices();
+  initSR();
+  // 延迟播放，等Safari准备好
+  setTimeout(()=>speakText(opening),800);
 });
 
-// 打字发送
 function sendText(){
   const t=txtinp.value.trim();if(!t||!apiKey)return;
-  txtinp.value='';
-  if(state==='speaking')stopSpeaking();
-  sendToAI(t);
+  txtinp.value='';synth.cancel();sendToAI(t);
 }
 sndbtn.addEventListener('click',sendText);
 txtinp.addEventListener('keydown',e=>{if(e.key==='Enter')sendText();});
