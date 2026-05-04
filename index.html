@@ -193,7 +193,7 @@ function speakText(text){
     ws.onopen=()=>{
       ws.send(JSON.stringify({
         common:{app_id:XF_APPID},
-        business:{aue:'raw',sfl:1,auf:'audio/L16;rate=16000',vcn:'aisxping',speed:52,volume:80,pitch:52,tte:'UTF8'},
+        business:{aue:'raw',sfl:1,auf:'audio/L16;rate=16000',vcn:'x4_yezi',speed:52,volume:80,pitch:52,tte:'UTF8'},
         data:{status:2,text:btoa(unescape(encodeURIComponent(text)))}
       }));
     };
